@@ -18,7 +18,7 @@ public class DADOS_PESSOAIS extends JFrame{
     private JTextField LoginField;
     private JTextField SenhaField;
     private JTextField TelefoneField;
-    private endereço endereço;
+    private endereco endereco;
 
     ///////////////////////////////////////////////////////////////////////////////
     
@@ -54,9 +54,7 @@ public class DADOS_PESSOAIS extends JFrame{
         return TelefoneField;
     }
 
-    public endereço getEndereço() {
-        return endereço;
-    }
+   
  //////////////////////////////////////////////////////////////////////////////////////
 
     public void setNomeField(JTextField NomeField) {
@@ -91,9 +89,7 @@ public class DADOS_PESSOAIS extends JFrame{
         this.TelefoneField = TelefoneField;
     }
 
-    public void setEndereço(endereço endereço) {
-        this.endereço = endereço;
-    }
+    
     
 /////////////////////////////////////////////////////////////////////////////////    
     
@@ -126,51 +122,63 @@ public class DADOS_PESSOAIS extends JFrame{
         PainelDados01.add(Titulo);
         
 ////////////////////////////////////////////////////////////////////////////////        
-        
-        JPanel PainelDados02 = new JPanel();
-        PainelDados02.setLayout(new GridLayout(8,2));
+       JPanel PainelDados02= new JPanel();
+       PainelDados02.setLayout(new GridLayout(4,1));
+       
+       
+////////////////////////////////////////////////////////////////////////////////
+
+       JLabel dadospessoais= new JLabel("Dados Pessoais");
+       dadospessoais.setFont(new Font("arial", Font.BOLD,14));
+       PainelDados02.add(dadospessoais);
+           
+ ///////////////////////////////////////////////////////////////////////////////
+
+
+        JPanel SetorPessoal = new JPanel();
+        SetorPessoal.setLayout(new GridLayout(4,4));
         
         
         JLabel Nome = new JLabel("Nome:");
-        Nome.setBorder(BorderFactory.createMatteBorder(0, 200, 0, 0, new Color(147,211,255)));
+        Nome.setBorder(BorderFactory.createMatteBorder(0, 50, 0, 0, new Color(147,211,255)));
         
         setNomeField(new JTextField(8));
         getNomeField().setBorder(BorderFactory.createMatteBorder(1, 0, 1, 10, new Color(147,211,255)));
         
         
         JLabel SUS = new JLabel("Cartão do SUS:");
-        SUS.setBorder(BorderFactory.createMatteBorder(0, 152, 0, 0, new Color(147,211,255)));
+        SUS.setBorder(BorderFactory.createMatteBorder(0, 50, 0, 0, new Color(147,211,255)));
         
         setSUSField(new JTextField(10));
         getSUSField().setBorder(BorderFactory.createMatteBorder(1,0,1,10, new Color(147,211,255)));
         
         JLabel Idade = new JLabel("Idade:");
-        Idade.setBorder(BorderFactory.createMatteBorder(0,203, 0, 0, new Color(147,211,255)));
+        Idade.setBorder(BorderFactory.createMatteBorder(0,50, 0, 0, new Color(147,211,255)));
         
         setIdadeField( new JTextField(10));
         getIdadeField().setBorder(BorderFactory.createMatteBorder(1,0,1,10, new Color(147,211,255)));
         
         JLabel CPF = new JLabel("CPF:");
-        CPF.setBorder(BorderFactory.createMatteBorder(0, 213, 0, 0, new Color(147,211,255)));
+        CPF.setBorder(BorderFactory.createMatteBorder(0, 50, 0, 0, new Color(147,211,255)));
         
         setCPFField(new JTextField(10));
         getCPFField().setBorder(BorderFactory.createMatteBorder(1,0,1,10, new Color(147,211,255)));
         
         
         JLabel Email = new JLabel("E-mail:");
-        Email.setBorder(BorderFactory.createMatteBorder(0, 201, 0, 0, new Color(147,211,255)));
+        Email.setBorder(BorderFactory.createMatteBorder(0, 50, 0, 0, new Color(147,211,255)));
         
         setEmailField(new JTextField(10));
         getEmailField().setBorder(BorderFactory.createMatteBorder(1,0,1,10, new Color(147,211,255)));
         
         JLabel Telefone = new JLabel("Telefone:");
-        Telefone.setBorder(BorderFactory.createMatteBorder(0, 188, 0, 0, new Color(147,211,255)));
+        Telefone.setBorder(BorderFactory.createMatteBorder(0, 50, 0, 0, new Color(147,211,255)));
         
         setTelefoneField(new JTextField(10));
         getTelefoneField().setBorder(BorderFactory.createMatteBorder(1,0,1,10, new Color(147,211,255)));
         
         JLabel Login = new JLabel("Login:");
-        Login.setBorder(BorderFactory.createMatteBorder(0, 205, 0, 0, new Color(147,211,255)));
+        Login.setBorder(BorderFactory.createMatteBorder(0, 50, 0, 0, new Color(147,211,255)));
                 
         setLoginField(new JTextField(10));
         getLoginField().setBorder(BorderFactory.createMatteBorder(1,0,1,10, new Color(147,211,255)));
@@ -190,35 +198,38 @@ public class DADOS_PESSOAIS extends JFrame{
         
         
         JLabel Senha = new JLabel("Senha:");
-        Senha.setBorder(BorderFactory.createMatteBorder(0, 203, 0, 0, new Color(147,211,255)));
+        Senha.setBorder(BorderFactory.createMatteBorder(0, 50, 0, 0, new Color(147,211,255)));
         
         setSenhaField(new JTextField(10));
         getSenhaField().setBorder(BorderFactory.createMatteBorder(1,0,1,10, new Color(147,211,255)));
         
-        PainelDados02.add(Nome);
-        PainelDados02.add(getNomeField());
+        SetorPessoal.add(Nome);
+        SetorPessoal.add(getNomeField());
         
-        PainelDados02.add(SUS);
-        PainelDados02.add(getSUSField());
+        SetorPessoal.add(SUS);
+        SetorPessoal.add(getSUSField());
         
-        PainelDados02.add(Idade);
-        PainelDados02.add(getIdadeField());
+        SetorPessoal.add(Idade);
+        SetorPessoal.add(getIdadeField());
         
-        PainelDados02.add(CPF);
-        PainelDados02.add(getCPFField());
+        SetorPessoal.add(CPF);
+        SetorPessoal.add(getCPFField());
         
-        PainelDados02.add(Email);
-        PainelDados02.add(getEmailField());
+        SetorPessoal.add(Email);
+        SetorPessoal.add(getEmailField());
         
-        PainelDados02.add(Telefone);
-        PainelDados02.add(getTelefoneField());
+        SetorPessoal.add(Telefone);
+        SetorPessoal.add(getTelefoneField());
         
-        PainelDados02.add(Login);
-        PainelDados02.add(getLoginField());
+        SetorPessoal.add(Login);
+        SetorPessoal.add(getLoginField());
         
-        PainelDados02.add(Senha);
-        PainelDados02.add(getSenhaField());
+        SetorPessoal.add(Senha);
+        SetorPessoal.add(getSenhaField());
         
+        PainelDados02.add(SetorPessoal);
+       
+      
 ////////////////////////////////////////////////////////////////////////////////
 
         JPanel PainelDados03 = new JPanel();
@@ -247,7 +258,7 @@ public class DADOS_PESSOAIS extends JFrame{
         PainelDados01.setBackground(new Color(147,211,255));
         
         add(PainelDados02, BorderLayout.CENTER);
-        PainelDados02.setBackground(new Color(147,211,255));
+        SetorPessoal.setBackground(new Color(147,211,255));
         
         add(PainelDados03, BorderLayout.SOUTH);
         PainelDados03.setBackground(new Color(147,211,255));
@@ -272,7 +283,7 @@ public class DADOS_PESSOAIS extends JFrame{
             else{log.dados01(NomeField.getText(), SUSField.getText(), IdadeField.getText(), CPFField.getText(), EmailField.getText(), SUSField.getText(), LoginField.getText(), SenhaField.getText());
             
            
-             endereço objendereço = new endereço();
+             endereco objendereço = new endereco();
              
              
              objendereço.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

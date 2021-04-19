@@ -81,8 +81,11 @@ public class LOGIN_MEDICO extends JFrame {
     
     public LOGIN_MEDICO(){
         super("Área do Médico");
+        
         WindowEvent evt = null;
+        
         AoAbrir(evt);
+        
        dadosdomedico();
   
     }
